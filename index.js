@@ -12,6 +12,6 @@ app.post( '/upload', upload.single( 'file' ), function( req, res, next ) {
   // Metadata about the uploaded file can now be found in req.file
 });
 
-app.listen( 8080, function() {
+app.listen( process.env.PORT || 5000, function() {
   console.log( 'Express server listening on port 8080' );
 });
